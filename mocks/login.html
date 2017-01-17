@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,700" />
+		<link rel="stylesheet" href="resources/grid.css" />
+		<link rel="stylesheet" href="resources/style.css" />
+
+		<script src="https://use.fontawesome.com/014224a308.js"></script>
+		<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	</head>
+
+	<body>
+		<div class="content">
+			<div class="header">
+				<div class="row">
+					<div class="col12">
+						<div class="logo">
+							<i class="fa fa-cogs" aria-hidden="true" style="margin-right: 5px;"></i> gitalytics
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col4">&nbsp;</div>
+				<div class="col4">
+					<div class="loginContainer">
+						<div class="loginBox">
+							<h2><i class="fa fa-sign-in" aria-hidden="true"></i> Login</h2>
+
+							<div class="info">
+								<i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="#">forgot password?</a>
+							</div>
+
+							<div class="info">
+								<i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="#">need to register an account?</a>
+							</div>
+
+							<div class="loginFields">
+								<input class="loginField" onkeypress="return checkLogin(event)" type="text" placeholder="username..." />
+								<input class="loginField" onkeypress="return checkLogin(event)" type="password" />
+							</div>
+
+							<div class="loading">
+								<img src="http://mainesnoprodealer.com/wp-content/themes/bigcardealer/images/common/loader.gif" />
+							</div>
+						</div>
+
+						<div class="message">
+							ERROR: Invalid username/password
+						</div>
+					</div>
+				</div>
+				<div class="col4">&nbsp;</div>
+		</div>
+	</body>
+</html>
+
+<script>
+	function checkLogin(event) {
+		if (event.keyCode === 13) {
+			$('.loginBox').addClass('loading');
+			$('.loginField').prop('disabled', true);
+		}
+	}
+</script>
